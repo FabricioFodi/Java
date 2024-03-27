@@ -1,0 +1,60 @@
+//Java Code...
+//
+//Código usando do-while para retornar quando uma etapa de verificação falha.
+//Usando verificações para evitar erros..
+
+package backend;
+
+import java.util.Scanner;
+
+public class b1 {
+
+	 static String nome;
+	 static int idade;
+	 static float altura;
+	
+	public static void main(String[] args) {
+	Scanner scanner= new Scanner(System.in);
+	
+	do {
+	System.out.print("Digite seu Nome: ");
+	nome = scanner.nextLine();
+	if(!nome.matches("[\\p{L} '-]+")) {
+		System.out.println("Dados Inválidos!");
+		}
+	}while(!nome.matches("[\\p{L} '-]+"));
+	
+	do {
+	System.out.print("Digite sua idade: ");
+	while (!scanner.hasNextInt()) {
+		System.out.println("Dados Inválidos!");
+        System.out.print("Digite sua idade: ");
+        scanner.next(); // Limpa o buffer do scanner
+    	}
+	
+	idade = scanner.nextInt();
+	if(idade<0 || idade>100) {
+		System.out.println("Dados Inválidos!");
+		}
+	}while(idade<0 || idade>10);
+	do {
+	System.out.print("Digite sua Altura(m): ");
+	while(!scanner.hasNextFloat()) {
+	System.out.println("Dados Inválidos!");
+	System.out.print("Digite sua Altura: ");
+	scanner.next();
+	}
+	altura = scanner.nextFloat();
+	if(altura<0.00 || altura>2.50) {
+		System.out.println("Dados Inválidos!");
+		}
+	}while(altura<0.00 || altura>2.50);
+	
+	
+	System.out.print("Nome:" + nome);
+	System.out.print("\nIdade: " + idade);
+	System.out.print("\nAltura: " + altura);
+	}
+
+}
+
