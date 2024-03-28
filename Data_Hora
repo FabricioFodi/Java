@@ -1,0 +1,29 @@
+//Java Code...
+//
+//Código que atualiza o horário em tempo real
+
+package backend;
+
+import java.time.LocalDateTime; // Import the LocalDateTime class
+import java.time.format.DateTimeFormatter; // Import the DateTimeFormatter class
+
+public class btres {
+  public static void main(String[] args) {
+	 while(true) {
+    LocalDateTime myDateObj = LocalDateTime.now();
+   // System.out.println("Before formatting: " + myDateObj);
+    DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("E, dd/MM/yyyy HH:mm:ss");
+
+    String formattedDate = myDateObj.format(myFormatObj);
+    System.out.println("Relógio: " + formattedDate);
+  
+    	try {
+			Thread.sleep(1000);
+			
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	  }
+}
+}
