@@ -1,0 +1,83 @@
+// Java Code...
+//
+// HAshMap
+
+package backend;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Collections;
+
+
+public class btres {
+  public static void main(String[] args) {
+	
+	 HashMap<String, String> Capitais = new HashMap<String, String>();
+	 
+	 
+	 Capitais.put("São Paulo","São Paulo");
+	 Capitais.put("Paraná", "Curitiba");
+	 Capitais.put("Santa Catarina", "Florianópolis");
+	 Capitais.put("Rio Grande Do Sul", "Porto Alegre");
+	 Capitais.put("Ceará", "Fortaleza");
+	
+	 for (String i : Capitais.values()) { // para mostrar em forma de lista im abaixo do outro
+	 System.out.println(i);
+	 }
+  }
+}
+
+
+//==================================
+
+//Acessar um item
+//capitalCities.get("England");
+
+//==================================
+
+//Remover um Item
+//capitalCities.remove("England");
+
+//==================================
+
+//Remover todos os Itens
+//capitalCities.clear();
+
+//==================================
+
+//Tamanho do HashMap
+//capitalCities.size();
+
+//==================================
+
+//Código que mostra apenas as Chaves
+
+// Print keys
+//for (String i : capitalCities.keySet()) {
+ // System.out.println(i);
+//}
+
+//==================================
+
+//Código que mostra apenas os Valores
+
+// Print values
+//for (String i : capitalCities.values()) {
+ // System.out.println(i);
+//}
+
+//==================================
+
+//Mostra as Chaves e os Valores
+// Print keys and values
+//for (String i : capitalCities.keySet()) {
+//  System.out.println("key: " + i + " value: " + capitalCities.get(i));
+//} // ex: ("Estado: " + i + "Cidade: " + Capitais.get(1));
+
+//==================================
+
+//Também é possivel fazer um HashMap com Numeros
+// HashMap<String, Integer> people = new HashMap<String, Integer>();
+// people.put("John", 32);
+
+//==================================
