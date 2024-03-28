@@ -1,0 +1,57 @@
+//Java Code...
+//
+// Tratamento de Exceções 
+
+package backend;
+
+
+public class btres {
+  public static void main(String[] args) {
+   try {
+     int[] myNumbers = {1, 2, 3};
+      System.out.println(myNumbers[10]);
+} catch (Exception e) {
+     System.out.println("Algo de errado não esta certo.");
+	    }
+	  }
+	}
+
+
+//================================
+
+// Se ocorrer um erro, podemos usar para capturar o erro e executar algum código para lidar com ele:
+
+//================================
+
+// Você pode usar um "finally" para executar o código independente do resultado
+// finally {
+  //    System.out.println("The 'try catch' is finished.");
+  //  }
+
+//================================
+
+// A Palavra-Chave Throw. A instrução permite que você crie um erro personalizado.
+// static void checarIdade(int idade) {
+// if (idade < 18) {
+ //     throw new ArithmeticException("Acesso Negado - Você deve ter pelo menos 18 anos.");
+//    }
+//    else {
+  //    System.out.println("Acesso Liberado - Você tem idade suficiente!");
+  //  }
+//  }
+
+//  public static void main(String[] args) {
+  //  checarIdade(15); // Mudando a idade para 15(menor)
+//  }
+
+//================================
+
+// Se a idade fosse 20, você não teria essa exceção exceção:
+// checkAge(20);
+//Saída:
+// Acesso Liberado - Você tem idade suficiente!
+
+//================================
+
+
+//================================
