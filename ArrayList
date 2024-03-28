@@ -1,0 +1,72 @@
+//Java Code...
+//
+//Usando ArrayList
+
+package backend;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class btres {
+  public static void main(String[] args) {
+	
+	  ArrayList<String> carros = new ArrayList<String>();
+	  carros.add("Volvo");
+	  carros.add("BMW");
+	  carros.add("Mercedes");
+	  carros.add("Ferrari");
+	  Collections.sort(carros); //Classifica em Ordem alfabetica ou númerica
+	  for (String i : carros) {
+	  System.out.println(i);
+	  }
+  }
+}
+
+
+
+
+
+//============================================
+//Acessar um Item
+
+//cars.get(0);
+
+//============================================
+
+//Alterar um Item
+
+//cars.set(0, "Opel");
+
+//============================================
+
+//Remover um Item e Remover todos
+
+//cars.remove(0);
+//cars.clear();
+
+//============================================
+
+//Tamanho de ArrayList
+
+//cars.size();
+
+//============================================
+
+// Usando método For para listar os Carros
+
+//for (int i =0; i<carros.size(); i++) {
+//	  System.out.println(carros.get(i));
+	//  }
+//============================================
+
+//Usando For-Each para listar os carros
+
+//for (String i : carros) {
+	//  System.out.println(i);
+	  //}
+//============================================
+
+//Usando o pacote Collections e um For-Each para listar em ordem alfabética ou numérica
+
+//import java.util.Colletcions;
+//Collections.sort(carros); 
