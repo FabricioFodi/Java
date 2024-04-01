@@ -1,0 +1,18 @@
+package backend;
+
+import java.io.File;                                                                   // importar a Classe File que irá representar arquivos ou diretórios do seu sistema de arquivos.
+
+public class btres {
+  public static void main(String[] args) {
+		 File obj = new File("C:\\Users\\fabricio\\Desktop\\testearquivo.txt");            // Caminho até o arquivo
+		 if (obj.exists()) {
+		      System.out.println("Nome do Arquivo: " + obj.getName());                     // Pega o nome do arquivo
+		      System.out.println("Caminho: " + obj.getAbsolutePath());                     // Pega o Caminho em que foi criado
+		      System.out.println("Gravável: " + obj.canWrite());	                         // Se é possivel escrever no arquivo
+		      System.out.println("Legível: " + obj.canRead());		                         // Se é possivel ler o arquivo
+		      System.out.println("Tamanho do Arquivo: " + obj.length() + " bytes");	       // pega o tamanho em bytes
+		    } else {
+		      System.out.println("Este Arquivo não existe.");	                             // Caso arquivo não exista
+		    }
+  }
+}
