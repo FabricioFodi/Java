@@ -1,0 +1,14 @@
+package backend;
+
+import java.io.File;                                                                             // importar a Classe File que irá representar arquivos ou diretórios do seu sistema de arquivos.
+
+public class btres {
+  public static void main(String[] args) {
+		 File obj = new File("C:\\Users\\fabricio\\Desktop\\testearquivo.txt");                       // Caminho até o arquivo
+		 if (obj.delete()) { 
+		      System.out.println("Arquivo deletado: " + obj.getName());
+		    } else {
+		      System.out.println("Falha ao deletar arquivo. Este arquivo pode não existir mais.");
+		    }
+  		}
+}
