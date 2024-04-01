@@ -1,0 +1,20 @@
+package backend;
+
+import java.io.File; // importar a Classe File que irá representar arquivos ou diretórios do seu sistema de arquivos.
+import java.io.IOException; // esta classe serve para capturar possiveis erros e trata-los
+
+public class btres {
+  public static void main(String[] args) {
+	 try {
+		 File teste = new File("C:\\Users\\fabricio\\Desktop\\testearquivo.txt");       // para criar um arquivos num lugar especifico no computador
+		 if(teste.createNewFile()) {
+			 System.out.print("Arquivo criado: " + teste.getName());                      //"teste.getName()" pega o nome do arquivo e mostra ele 	 
+		 }else {
+			 System.out.print("arquivo ja existe!");                                      //Caso o arquivo ja exista, ou você execute o programa por uma segunda vez, o arquivo não sera criado por que ele ja existe.
+		 }
+	 }catch(IOException e) {
+		 System.out.print("Ocorreu um erro inesperado");                                // Caso aconteça algo que não está programado no sistema ele exibira esta mensagem;
+		 e.printStackTrace();
+	 }
+  }
+}
