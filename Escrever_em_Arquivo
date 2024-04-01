@@ -1,0 +1,18 @@
+package backend;
+
+import java.io.FileWriter;                                                                           // importar a Classe File que irá representar arquivos ou diretórios do seu sistema de arquivos.
+import java.io.IOException;                                                                          // esta classe serve para capturar possiveis erros e trata-los
+
+public class btres {
+  public static void main(String[] args) {
+	 try {
+		 FileWriter testeEscrita = new FileWriter("C:\\Users\\fabricio\\Desktop\\testearquivo.txt");     // Caminho até o arquivo
+		 testeEscrita.write("Olá Mundo!");                                                               // Conteúdo a ser escrito
+		 testeEscrita.close();
+		 System.out.print("Sucesso ao escrever no Arquivo!"); 
+	 }catch(IOException e) {
+		 System.out.print("Ocorreu um erro inesperado");                                                 // Caso aconteça algo que não está programado no sistema ele exibira esta mensagem;
+		 e.printStackTrace();
+	 }
+  }
+}
