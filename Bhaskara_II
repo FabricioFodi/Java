@@ -1,0 +1,45 @@
+//Java Code..
+//
+// Fazendo um código para equação de segundo grau..
+
+package tes;
+
+
+import java.util.Scanner;
+
+public class aTres {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        
+        int a = 0, b = 0, c = 0;
+        System.out.print("a: ");
+        a = scan.nextInt();
+
+        System.out.print("b: ");
+        b = scan.nextInt();
+
+        System.out.print("c: ");
+        c = scan.nextInt();
+
+        // Criação de um array de inteiros para armazenar as raízes calculadas
+        int[] resultados = bhaskara(a, b, c);
+
+        // Imprime os resultados
+        System.out.println("Resultado Bhaskara:");
+        System.out.println("x1 = " + resultados[0]);
+        System.out.println("x2 = " + resultados[1]);
+    }
+    
+    // Método para calcular as raízes da equação de segundo grau
+    public static int[] bhaskara(int a, int b, int c) {
+        // Calculo o delta
+        int delta = (int) Math.sqrt(Math.pow(b, 2) - 4 * a * c);
+        
+        // Calculo as raízes usando Bhaskara
+        int x1 = (-b + delta) / (2 * a);
+        int x2 = (-b - delta) / (2 * a);
+        
+     // Retorno as raízes como um array de inteiros
+        return new int[]{x1, x2};
+    }
+}
