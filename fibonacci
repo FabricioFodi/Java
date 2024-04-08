@@ -1,0 +1,24 @@
+//Java Code..
+//
+// tpo 10 códigos mais dificeis que eu ja fiz.
+
+
+package tes;
+
+public class aDois {
+    public static void main(String[] args) {
+       int x = 14;
+    
+       for(int y = 0; y < x; y++) {
+    	   System.out.print(fibonacci(y) + " ");
+       }
+    }
+       
+       public static int fibonacci(int x) {
+    	   if(x <= 1) {
+    		   return x;
+    	   }else {
+    		   return fibonacci(x-1) + fibonacci(x-2); //quando ele quer calcular o fibonacci(5) ele precisa fazer (5-1) para char o 4° número e (5-2) para chamar o 3° número
+    	   }
+    }
+}
