@@ -1,0 +1,214 @@
+//Java Code..
+//
+//Utilizando verificações em todos os case
+
+/*
+ *Fazer um Código para que o usuário escolha qual medida
+ *de temperatura irá usar e depois mostre ela convertida para Fahrenheit ou Kelvin
+ */
+package tes;
+
+import java.util.Scanner;
+
+public class aSete {
+
+	public static void main(String[] args) {
+		
+		System.out.print("Esoclha uma medida para converter: \n" +
+				"[1]  Celsius para Fahrenheit\n"+
+				"[2]  Celsius para Kelvin\n"+
+				"[3]  Celsius para Rankine\n"+
+				"[4]  Fahrenheit para Celsius\n"+
+				"[5]  Fahrenheit para Kelvin\n"+
+				"[6]  Fahrenheit para Rankine\n"+
+				"[7]  Kelvin para Celsius\n"+
+				"[8]  Kelvin para Fahrenheit\n"+
+				"[9]  Kelvin para Rankine\n"+
+				"[10] Rankine para Celsius\n"+
+				"[11] Rankine para Fahrenheit\n"+
+				"[12] Rankine para Kelvin\n"+
+				"Digite a opção: ");
+		
+		
+		Scanner scanner = new Scanner(System.in);
+		double celsius = 0;
+		double fahrenheit = 0;
+		double kelvin = 0;
+		double rankine = 0;
+		int escolha = scanner.nextInt();
+		
+		switch(escolha){
+			/*
+			 * Celsius para Fahrenheit
+			 */
+			case 1: 
+				System.out.print("Digite a temperatura em Celsius: ");
+				celsius = scanner.nextDouble();
+				if(celsius<= 1000 && celsius>= -273.15) {
+					fahrenheit = (celsius * 9/5 + 32);
+					System.out.printf("Temperatura em Fahrenheit: %.2f°F", fahrenheit);
+				}else {
+					System.out.print("Valor inválido!");
+				}
+				break;
+			/*
+			 * 	Celsius para Kelvin
+			 */
+			case 2:
+				System.out.print("Digite a temperatura em Celsius: ");
+				celsius = scanner.nextDouble();
+				if(celsius<= 1000 && celsius>= -273.15) {
+					kelvin = (celsius - 273.15);
+					System.out.printf("Temperatura em Kelvin: %.2f K", kelvin);
+				}else {
+					System.out.print("Valor inválido!");
+				}
+				break;
+			/*
+			 * Celsius para Rankine
+			 */
+			case 3: 
+				System.out.print("Digite a temperatura em Celsius: ");
+				rankine = scanner.nextDouble();
+				if(rankine <= 0 && rankine >= 2291.67) {
+					rankine =(celsius + 273.15) * 9/5;
+					System.out.printf("Temperatura em Rankine: %.2f°R", rankine);
+				}else {
+					System.out.print("Valro inválido!");
+				}
+				break;
+			/*
+			 * Fahrenheit para Celsius
+			 */
+			case 4: 
+				System.out.print("Digite a temperatura em Fahrenheit: ");
+				fahrenheit = scanner.nextDouble();
+				if(fahrenheit <= 1832 && fahrenheit >= -459.67) {
+					celsius = (fahrenheit - 32) * 5/9;
+					System.out.printf("Temperatura em Celsius: %.2f°C", celsius);
+				}else {
+					System.out.print("Valor inválido!");
+				}
+				break;
+			/*
+			 * Fahrenheit para Kelvin
+			 */
+			case 5:
+				System.out.print("Digite a temperatura em Fahrenheit: ");
+				fahrenheit = scanner.nextDouble();
+				if(fahrenheit <= 1832 && fahrenheit >= -459.67) {
+					kelvin = (fahrenheit + 459.67)*5/9;
+					System.out.printf("Temperatura em Kelvin: %.2f K", kelvin);
+				}else {
+					System.out.print("Valor inválido");
+				}
+				break;
+			
+			/*
+			 * Fahrenheit para Rankine
+			 */
+			case 6:
+				System.out.print("Digite a temperatura em Fahrenheit: ");
+				fahrenheit = scanner.nextDouble();
+				if(fahrenheit <= 1832 && fahrenheit >= -459.67) {
+					rankine =(fahrenheit + 459.67);
+					System.out.printf("Temperatura em Rankine: %.2f°R", rankine);
+				}else {
+					System.out.print("Valor inválido!");
+				}
+				break;
+			 /*
+			 * Kelvin para Celsius
+			 */
+			case 7:
+				System.out.print("Digite a temperatura em Kelvin: ");
+				kelvin = scanner.nextDouble();
+				if(kelvin >=0 && kelvin <=1000) {
+					celsius = (kelvin - 273.15);
+					System.out.printf("Temperatura em celsius: %.2f°C", celsius);
+				}else {
+					System.out.print("Valor inválido!");
+				}
+				break;
+			/*
+			 * 	Kelvin para Fahrenheit
+			 */
+			case 8:
+				System.out.print("Digite a temperatura em Kelvin: ");
+				kelvin = scanner.nextDouble();
+				if(kelvin >= 0 && kelvin <= 1000) {
+					fahrenheit = (kelvin + 459.67) * 5/9;
+					System.out.printf("Temperatura em Fahrenheit: %.2f°F", fahrenheit);
+				}else {
+					System.out.print("Valor inválido");
+				}
+				break;
+			
+			/*
+			* Kelvin para Rankine 
+			*/
+			case 9:
+				System.out.print("Digite a temperatura em Kelvin: ");
+				kelvin = scanner.nextDouble();
+				if(kelvin >= 0 && kelvin <= 1000) {
+					rankine = kelvin * 9/5;
+					System.out.printf("Temperatura em Rankine: %.2f°R", rankine);
+				}else {
+					System.out.print("Valor inválido!");
+				}
+				break;
+				
+			/*
+			 * Rankine para Celsius
+			 */
+			case 10:
+				System.out.print("Digite a temperatura em Rankine: ");
+				rankine = scanner.nextDouble();
+				if(rankine >=0  && rankine <= 1800) {
+					celsius = (rankine -491.67)* 5/9;
+					System.out.printf("Temperatura em Celsius: %.2f°C", celsius);
+				}else {
+					 System.out.print("Valor inválido!");
+				}
+				break;
+				
+			/*
+			 * Rankine para Fahrenheit	
+			 */
+				
+			case 11:
+				System.out.print("Digite a temperatura em Rankine: ");
+				rankine = scanner.nextDouble();
+				if(rankine >=0 && rankine <= 1800) {
+					fahrenheit = rankine - 459.67;
+					System.out.printf("Temperatura em Fahrenheit: %.2f°F", fahrenheit);
+				}else {
+					System.out.print("Valor inválido!");
+				}
+				break;
+				
+			/*
+			 * Rankine para Kelvin	
+			 */
+				
+			case 12: 
+				System.out.print("Digite a temperatura em Rankine: ");
+				rankine = scanner.nextDouble();
+				if(rankine >= 0 && rankine <= 1800) {
+					kelvin = rankine * 5/9;
+					System.out.printf("Temperatura em kelvin: %.2f K", kelvin);
+				}else {
+					System.out.print("Valor inválido!");
+				}
+				break;
+				
+			/*
+			 * Nenhuma das opções	
+			 */
+			default:
+				System.out.print("Opção inválida");
+				return;
+				
+		}
+	}
+}
