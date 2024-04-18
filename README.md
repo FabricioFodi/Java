@@ -1,4 +1,4 @@
-Exercícios - Java
+# Exercícios - Java
 
 Exercícios do semestre passado que estou refazendo.
 
