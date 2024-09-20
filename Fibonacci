@@ -20,5 +20,5 @@ public class aDois {
     	   }else {
     		   return fibonacci(x-1) + fibonacci(x-2); //quando ele quer calcular o fibonacci(5) ele precisa fazer (5-1) para char o 4° número e (5-2) para chamar o 3° número
     	   }
-    }
+    } 
 }

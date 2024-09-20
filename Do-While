@@ -24,7 +24,7 @@ public class b1 {
 		}
 	}while(!nome.matches("[\\p{L} '-]+"));
 	
-	do {
+	do { 
 	System.out.print("Digite sua idade: ");
 	while (!scanner.hasNextInt()) {
 		System.out.println("Dados Inválidos!");

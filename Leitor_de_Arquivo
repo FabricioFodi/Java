@@ -13,7 +13,7 @@ public class btres {
 			 String dados = leitor.nextLine();
 			 System.out.println(dados);
 		 }
-		leitor.close();                                                           // Fecha o leitor
+		leitor.close();                                                              // Fecha o leitor
 	 }catch(IOException e) {
 		 System.out.print("Ocorreu um erro inesperado");                          // Caso aconteça algo que não está programado no sistema ele exibira esta mensagem;
 		 e.printStackTrace();

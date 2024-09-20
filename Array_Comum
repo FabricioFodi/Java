@@ -11,7 +11,7 @@ public class b0 {
 	public static void main (String[] args) {
 		
 		String[] carros = {"Volvo", "BMW", "Mercedes", "Volkswagem"};
-			for(String i : carros) { 
+			for(String i : carros) {   
 		System.out.println(i);
 			}
 	}

@@ -16,7 +16,7 @@ public class aTres {
         a = scan.nextInt();
 
         System.out.print("b: ");
-        b = scan.nextInt();
+        b = scan.nextInt();  
 
         System.out.print("c: ");
         c = scan.nextInt();

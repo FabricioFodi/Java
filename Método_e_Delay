@@ -17,7 +17,7 @@ public class b0 {
 	public static void main (String[] args) throws InterruptedException {
 		meuMetodo();
 		Thread.sleep(1500);
-		meuMetodo();
+		meuMetodo();  
 		Thread.sleep(1500);
 		meuMetodo();
 		Thread.sleep(1500);

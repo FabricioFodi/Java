@@ -18,5 +18,5 @@ public class aQuatro {
 			fatorial = fatorial * i;
 		}
 		System.out.print("O fatorial de " + numero + " é " + fatorial);
-	}
+	} 
 }

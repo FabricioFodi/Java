@@ -16,7 +16,7 @@ public class btres {
 	  carros.add("Mercedes");
 	  carros.add("Ferrari");
 	  Collections.sort(carros); //Classifica em Ordem alfabetica ou númerica
-	  for (String i : carros) {
+	  for (String i : carros) {  
 	  System.out.println(i);
 	  }
   }

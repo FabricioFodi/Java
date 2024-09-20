@@ -17,7 +17,7 @@ public class b0 {
         int colunas = Integer.parseInt(scanner.nextLine());
 
         // Passo 2: Crie uma matriz vazia com as dimensões fornecidas
-        String[][] matriz = new String[linhas][colunas];
+        String[][] matriz = new String[linhas][colunas];  
 
         // Passo 3: Permita que o usuário insira os itens na matriz
         System.out.println("Digite os itens da matriz:");

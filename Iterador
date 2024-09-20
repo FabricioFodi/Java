@@ -14,7 +14,7 @@ public class btres {
 	    carros.add("BMW");
 	    carros.add("Ford");
 	    carros.add("Mazda");
-
+   
 	    // Get the iterator
 	    Iterator<String> iterator = carros.iterator();
 
