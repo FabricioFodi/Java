@@ -1,0 +1,26 @@
+//Java Code...
+//
+// Código para ler um arquivo de texto
+
+import java.io.File; // importar a Classe File que irá representar arquivos ou diretórios do seu sistema de arquivos.
+import java.io.IOException; // esta classe serve para capturar possiveis erros e trata-los.
+import java.util.Scanner;
+
+public class LeitorDeArquivo {
+    public static void main(String[] args) {
+        try {
+            File obj = new File("C:\\Users\\fabricio\\Desktop\\testearquivo.txt"); // Caminho até o arquivo
+            Scanner leitor = new Scanner(obj); // Criar um leitor para ler o meu objeto "testearquivo.txt"
+            while (leitor.hasNextLine()) { // o leitor irá ler enquanto houver linhas digitadas, true se houver mais
+                                           // linhas para ler no arquivo, e false caso contrário.
+                String dados = leitor.nextLine();
+                System.out.println(dados);
+            }
+            leitor.close();
+        } catch (IOException e) {
+            System.out.print("Ocorreu um erro inesperado"); // Caso aconteça algo que não está programado no sistema ele
+                                                            // exibira esta mensagem;
+            e.printStackTrace();
+        }
+    }
+}

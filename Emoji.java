@@ -1,0 +1,14 @@
+//Java Code..
+//
+
+public class Emoji {
+    public static void main(String[] args) {
+        String emoji = "\uD83D\uDC4D";
+        for (int i = 1; i <= 5; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(emoji);
+            }
+            System.out.println();
+        }
+    }
+}

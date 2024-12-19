@@ -1,0 +1,32 @@
+
+//Java Code..
+import java.util.Scanner;
+
+public class NumerosPrimos {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int numero;
+        boolean ePrimo = true;
+
+        System.out.print("Informe um número: ");
+        numero = scanner.nextInt();
+
+        // Iterar de 2 até a raiz quadrada do número, pois não há divisores maiores que
+        // a raiz quadrada
+        for (int i = 2; i * i <= numero; i++) {
+            if (numero % i == 0) {
+                // Se o resto da divisão for zero, o número não é primo
+                ePrimo = false;
+                scanner.close();
+                break;
+            }
+        }
+
+        if (ePrimo && numero > 1) {
+            System.out.println(numero + " é primo.");
+        } else {
+            System.out.println(numero + " não é primo.");
+        }
+    }
+}
